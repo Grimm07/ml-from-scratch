@@ -59,6 +59,9 @@ indent-style = "space"
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
+markers = [
+    "slow: marks tests that train models on real datasets (deselect with '-m \"not slow\"')",
+]
 
 [dependency-groups]
 dev = [
